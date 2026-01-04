@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Student Help Assistant - Login</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; background: #f0f8ff; }
+    input { padding: 10px; margin: 10px; width: 200px; }
+    button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+  </style>
+</head>
+<body>
+
+<h1>Login</h1>
+<input type="text" id="username" placeholder="Enter your name"><br>
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+  let name = document.getElementById("username").value;
+  if(name) {
+    localStorage.setItem("username", name); // store name for main page
+    window.location.href = "main.html"; // go to main page
+  } else {
+    alert("Please enter your name!");
+  }
+}
+</script>
+
+</body>
+</html>
