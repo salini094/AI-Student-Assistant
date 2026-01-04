@@ -7,7 +7,7 @@
     h1 { color: #007acc; }
     button { margin: 10px; padding: 15px 25px; font-size: 16px; background-color: #ff9800; color: white; border: none; cursor: pointer; border-radius: 5px; }
     button:hover { background-color: #e68a00; }
-    #output { margin-top: 20px; font-size: 16px; }
+    #output { margin-top: 20px; font-size: 16px; min-height: 50px; }
   </style>
 </head>
 <body>
@@ -21,7 +21,8 @@
 
 <script src="script.js"></script>
 <script>
-  document.getElementById("user").innerText = localStorage.getItem("username") || "Student";
+  // Display the registration number
+  document.getElementById("user").innerText = localStorage.getItem("regNumber") || "Student";
 </script>
 
 </body>
